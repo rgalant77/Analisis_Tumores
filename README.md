@@ -87,54 +87,57 @@ Sin correlación clara (`r = 0.12`).
 | **Gestores de salud**| Asignar recursos a tratamientos quirúrgicos y seguimiento postoperatorio.       |
 
 ---
-📊 Análisis de Tasa de Supervivencia en Pacientes con Tumores Cerebrales 🧠 + 🤖 ML Predictivo
+## 📊 Análisis de Tasa de Supervivencia en Pacientes con Tumores Cerebrales 🧠 + 🤖 ML Predictivo
 Estudio Galant Logo
 (Análisis clínico y predictivo integrado)
 
-🔍 Resumen Ampliado
+### 🔍 Resumen Ampliado
 Este proyecto combina análisis exploratorio y modelado predictivo para entender factores asociados a tumores cerebrales. Incluye:
 
-📈 Análisis estadístico de supervivencia
+- **📈 Análisis estadístico de supervivencia**
 
-🤖 Modelos de ML para predecir presencia de tumor
+- **🤖 Modelos de ML para predecir presencia de tumor**
 
-🎯 Recomendaciones clínicas basadas en datos
+- **🎯 Recomendaciones clínicas basadas en datos**
 
-🛠️ Actualización: Modelado Predictivo
-🎯 Objetivo del ML
+### 🛠️ Actualización: Modelado Predictivo
+### 🎯 Objetivo del ML
 Desarrollar un modelo de clasificación binaria para predecir Brain_Tumor_Present (presencia/ausencia de tumor) usando variables clínicas disponibles.
 
-📊 Metodología ML
-🔄 Pipeline de Trabajo
+## 📊 Metodología ML
+### 🔄 Pipeline de Trabajo
 graph TD
     A[Preprocesamiento] --> B[Balanceo de Datos]
     B --> C[Selección de Features]
     C --> D[Modelado]
     D --> E[Optimización]
     E --> F[Evaluación]
-1. 🔧 Preprocesamiento
-Codificación:
+
+### 1. 🔧 Preprocesamiento
+- **Codificación:**
 🏷️ OneHotEncoding para categóricas nominales
 🔢 LabelEncoding para ordinales
 
-Limpieza:
+- **Limpieza:**
 🧹 Imputación de valores faltantes
 ✂️ Normalización con StandardScaler
 
-2. ⚖️ Balanceo de Datos
-📉 Verificación de distribución de clases
+### 2. ⚖️ Balanceo de Datos
+- **📉 Verificación de distribución de clases**
 
-🔄 Técnicas aplicadas:
+- **🔄 Técnicas aplicadas:**
 
-Submuestreo (undersampling)
+-- **Submuestreo (undersampling)**
 
-Validación cruzada estratificada (StratifiedKFold)
+-- **Validación cruzada estratificada (StratifiedKFold)**
 
-3. 🤖 Modelos Implementados
-Modelo	Librería	Hiperparámetros Optimizados
-Regresión Logística	sklearn.linear_model	Penalización, C
-Random Forest Classifier	sklearn.ensemble	n_estimators, max_depth
-4. 📏 Métricas de Evaluación
+### 3. 🤖 Modelos Implementados
+
+Modelo	                      Librería	                   Hiperparámetros Optimizados
+Regresión Logística	          sklearn.linear_model	       Penalización, C
+Random Forest Classifier	  sklearn.ensemble	           n_estimators, max_depth
+
+### 4. 📏 Métricas de Evaluación
 
    metrics = {
     "accuracy": "Balanced Accuracy Score",
@@ -144,58 +147,58 @@ Random Forest Classifier	sklearn.ensemble	n_estimators, max_depth
     "conf_matrix": "Matriz de Confusión"
 }
 
-📌 Resultados Clave
-🏆 Performance de Modelos
-Modelo	Accuracy (⌀)	±SD	Precisión	Recall
-Regresión Logística	0.5019	±0.0007	0.48	0.51
-Random Forest	0.5001	±0.0011	0.49	0.50
-📉 Limitaciones Identificadas
-🎯 Poder predictivo bajo: Accuracy ~50% (similar a azar)
+## 📌 Resultados Clave
+### 🏆 Performance de Modelos
 
-🔍 Posibles causas:
+Modelo	               Accuracy (⌀)	          ±SD	            Precisión	          Recall
+Regresión Logística	   0.5019	              ±0.0007	        0.48	              0.51
+Random Forest	       0.5001	              ±0.0011	        0.49	              0.50
 
-Variables insuficientemente informativas
+## 📉 Limitaciones Identificadas
 
-Necesidad de biomarcadores adicionales
+- **🎯 Poder predictivo bajo: Accuracy ~50% (similar a azar)**
 
-Ruido en codificación de datos
-📉 Limitaciones Identificadas
-🎯 Poder predictivo bajo: Accuracy ~50% (similar a azar)
+- **🔍 Posibles causas:**
 
-🔍 Posibles causas:
+-- **Variables insuficientemente informativas**
 
-Variables insuficientemente informativas
+-- **Necesidad de biomarcadores adicionales**
 
-Necesidad de biomarcadores adicionales
+-- **Ruido en codificación de datos**
 
-Ruido en codificación de datos
 
-🧠 Insights Integrados
-🔗 Relación con Análisis Exploratorio
-Variables clave no predictivas:
+## 🧠 Insights Integrados
 
-Aunque Tumor_Size y Location afectan supervivencia, no predicen bien presencia inicial de tumor.
+### 🔗 Relación con Análisis Exploratorio
 
-Recomendación dual:
+1- Variables clave no predictivas:
 
-Para diagnóstico temprano: 🆕 Buscar nuevos biomarcadores
+- **Aunque Tumor_Size y Location afectan supervivencia, no predicen bien presencia inicial de tumor.**
 
-Para tratamiento: 🏥 Priorizar cirugía en casos confirmados (según EDA previo)
+2- Recomendación dual:
 
-🚀 Próximos Pasos
-🔄 Mejoras al Modelo
-[+] Incorporar técnicas avanzadas de balanceo (SMOTE)
+- **Para diagnóstico temprano: 🆕 Buscar nuevos biomarcadores**
 
-[+] Ensamblar modelos con VotingClassifier
+- **Para tratamiento: 🏥 Priorizar cirugía en casos confirmados (según EDA previo)**
 
-[+] Probar arquitecturas neuronales simples
+## 🚀 Próximos Pasos
 
-🧪 Requerimientos de Datos
-🔬 Incluir marcadores genéticos específicos
+### 🔄 Mejoras al Modelo
 
-🧬 Datos de neuroimagen estructurados (MRI cuantitativos)
+- **[+] Incorporar técnicas avanzadas de balanceo (SMOTE)**
 
-📂 Estructura Actualizada del Repo
+ - **[+] Ensamblar modelos con VotingClassifier**
+
+ - **[+] Probar arquitecturas neuronales simples**
+
+### 🧪 Requerimientos de Datos
+
+- **🔬 Incluir marcadores genéticos específicos**
+
+- **🧬 Datos de neuroimagen estructurados (MRI cuantitativos)**
+
+## 📂 Estructura Actualizada del Repo
+
 ├── ml/
 │   ├── preprocessing.py    # Scripts de limpieza
 │   ├── modeling.py        # Entrenamiento de modelos
